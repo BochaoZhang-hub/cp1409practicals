@@ -9,9 +9,9 @@ def main():
     (Q)uit    
     """
     print(menu)
-    choice = input("Enter your choice: ").upper()
     score = int(input("Enter your score: "))
     score = get_valid_score(score)
+    choice = input("Enter your choice: ").upper()
     while choice != "Q":
         if choice == "G":
             score = get_valid_score(score)
@@ -23,6 +23,8 @@ def main():
         else:
             print("invalid choice")
             choice = input("Enter your choice: ").upper()
+        print(menu)
+        choice = input("Enter your choice: ").upper()
     print("Goodbye! Thanks for using and hope to see you next time!")
 
 def get_valid_score(score):
