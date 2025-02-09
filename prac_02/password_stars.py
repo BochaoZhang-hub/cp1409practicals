@@ -1,3 +1,5 @@
+"""Module 2 - practical 2 """
+
 def main():
     length_required = 10
     password = get_password()

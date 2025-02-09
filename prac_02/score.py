@@ -1,6 +1,4 @@
-"""
-CP1404/CP5632 - Practical2. score.py
-"""
+"""Module 2 - practical 2 """
 import random
 
 def main():
