@@ -2,6 +2,7 @@
 import random
 
 def main():
+    """This function will print score and score level"""
     score = get_number()
     score_level = determine_score_level(score)
     print(f"Your score is {score}, your score level is {score_level}")
