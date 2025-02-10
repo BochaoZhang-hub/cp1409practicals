@@ -3,7 +3,7 @@
 def main():
     length_required = 10
     password = get_password()
-    if len(password) < length_required:
+    while len(password) < length_required:
         print("password is too short")
         password = get_password()
     print_asterisks(password)
