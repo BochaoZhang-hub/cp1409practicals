@@ -1,6 +1,6 @@
 """Module 2 - practical 2 """
 def main():
-
+    """This function will help change temperature"""
     MENU = """
     This is an temperature convert machine 
     C - Convert Celsius to Fahrenheit
