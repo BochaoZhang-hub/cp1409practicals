@@ -18,7 +18,7 @@ def main():
             print(score)
         elif choice == "P":
             score = check_score(score)
-            score_level = determine_score_level()
+            score_level = determine_score_level(score)
             print(f"your score level is {score_level}")
         elif choice == "S":
             score = check_score(score)
