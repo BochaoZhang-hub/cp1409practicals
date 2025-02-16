@@ -23,4 +23,7 @@ while not is_denominator_0:
         """
         Value Error will occur when the input of the numerator and denominator is not a int
         """
+    #except ZeroDivisionError:
+    #    print("Cannot divide by zero!")
+        """Zerodivisionerror will occur when the denominator input is 0"""
 print("Finished.")
