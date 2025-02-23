@@ -1,5 +1,4 @@
 import random
-from unittest import load_tests
 
 
 def main():
