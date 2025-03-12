@@ -1,7 +1,7 @@
 
 from guitar import Guitar
 """estimated time : 30 mins 
-actrual time : 20 mins """
+actual time : 20 mins """
 def main():
     guitars = []
     print("My guitars!")
