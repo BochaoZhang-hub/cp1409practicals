@@ -1,7 +1,7 @@
 class ProgrammingLanguage:
     """
     estimated doing time : 1 hour
-    actual doing time : 
+    actual doing time : 30 mins
     """
     def __init__(self, name, typing, reflection, year):
         """initializing all the statues of the program"""

@@ -1,5 +1,7 @@
-from guitar_test import test_is_vintage
+
 from guitar import Guitar
+"""estimated time : 30 mins 
+actrual time : 20 mins """
 def main():
     guitars = []
     print("My guitars!")
@@ -13,9 +15,10 @@ def main():
     print(f"{guitar} is added.\n")
 
     for i in range(len(guitars)):
-        if test_is_vintage():
-            print(f"Guitar{i+1}:{guitars[i][0]:>30}({guitars[i][1]}:>10),worth ${guitars[i][2]:>10} (vintage)")
+        if guitars[i].is_vintage():
+           vintage = "vintage"
         else :
-            print(f"Guitar{i + 1}:{guitars[i][0]:>30}({guitars[i][1]}:>10),worth ${guitars[i][2]:>10}")
+            vintage = ""
+        print(f"Guitar{i + 1}:{guitars[i].name:>30}({guitars[i].year}:>10),worth ${guitars[i].cost:>10} {vintage}")
 
 main()
