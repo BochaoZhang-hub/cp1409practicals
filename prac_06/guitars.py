@@ -14,11 +14,17 @@ def main():
     guitars.append(guitar)
     print(f"{guitar} is added.\n")
 
+    print_pricise_guitar_infor(guitars)
+
+
+def print_pricise_guitar_infor(guitars):
+    """This function prints the precise information of the guitar"""
     for i in range(len(guitars)):
         if guitars[i].is_vintage():
-           vintage = "vintage"
-        else :
+            vintage = "vintage"
+        else:
             vintage = ""
         print(f"Guitar{i + 1}:{guitars[i].name:>30}({guitars[i].year}:>10),worth ${guitars[i].cost:>10} {vintage}")
+
 
 main()
