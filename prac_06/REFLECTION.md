@@ -16,4 +16,4 @@ Learning the lecture every week before go to classes.
 I don't see anything here. 
 
 ## What is one request you have or change you suggest for this subject and/or your IT degree overall?
-I dont have any, you are doing really well!
+I dont have any, you are doing really well! !

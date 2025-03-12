@@ -5,7 +5,7 @@ actual time : 20 mins """
 def main():
     guitars = []
     print("My guitars!")
-    name = input("type in your guitars name:")
+    name = input("type in your guitars name: ")
     year = int(input("type in the year of your guitar:"))
     cost = float(input("How much is the guitar?"))
     guitars.append(Guitar("Gibson L-5 CES", 1922, 16035.40))

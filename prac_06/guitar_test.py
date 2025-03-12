@@ -1,7 +1,7 @@
 from guitar import Guitar
 
 def test_get_age():
-    """this function will test if we get the guitar correctly"""
+    """this function will test if we get the guitar correctly """
     guitar1 = Guitar("Gibson L-5 CES", 1922, 16035.40)
     guitar2 = Guitar("Another Guitar", 2013, 1200.00)
 
