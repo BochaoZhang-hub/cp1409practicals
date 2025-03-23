@@ -37,7 +37,7 @@ def main():
         choice = input("another choice: ")
 
 def add_new_project():
-    """This function will ask the user to prompt in a new project"""
+    """This function will ask the user to prompt in a new project."""
     name = input("Name: ")
     start_date = input("Start date (dd/mm/yyyy): ")
     priority = int(input("Priority: "))
