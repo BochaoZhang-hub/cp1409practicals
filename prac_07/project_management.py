@@ -23,9 +23,9 @@ def main():
         elif choice.upper() == "S":
             save_project(projects)
         elif choice.upper() == "D":
-            display_porject()
+            display_porject(projects)
         elif choice.upper() == "F":
-            pass
+            filter_project(projects)
         elif choice.upper() == "A":
             new_project = add_new_project()
             projects.append(new_project)
@@ -35,6 +35,19 @@ def main():
             print("invalid")
         print(menu)
         choice = input("another choice: ")
+
+
+
+def filter_project(projects):
+    date_string = input("Show projects that start after date (dd/mm/yyyy): ")
+    try:
+        user_date = datetime.strptime(date_string, "%d/%m/%Y").date()
+        filtered = [p for p in projects if p.start_date > user_date]
+        for project in filtered:
+            print(project)
+    except ValueError:
+        print("Invalid date format")
+
 
 def add_new_project():
     """This function will ask the user to prompt in a new project."""
@@ -82,3 +95,7 @@ def load_projects(FILENAME):
                 project = Project(name, start_date, priority, cost_estimate, completion)
                 projects.append(project)
     return projects
+
+
+if __name__ == "__main__":
+    main()
