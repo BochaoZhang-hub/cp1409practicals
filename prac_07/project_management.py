@@ -3,7 +3,7 @@ from projects import Project
 FILENAME = "projects.txt"
 
 def main():
-    projects = load_projects(FILENAME)
+
     menu = """
     Welcome to Pythonic Project Management
     Loaded 5 projects from projects.txt
@@ -19,7 +19,7 @@ def main():
     choice = input("Give your choice:")
     while choice.upper() != "Q":
         if choice.upper() == "L":
-            pass
+            projects = load_projects(FILENAME)
         elif choice.upper() == "S":
             save_project(projects)
         elif choice.upper() == "D":
@@ -27,7 +27,8 @@ def main():
         elif choice.upper() == "F":
             pass
         elif choice.upper() == "A":
-            pass
+            new_project = add_new_project()
+            projects.append(new_project)
         elif choice.upper() == "U":
             pass
         else:
@@ -35,8 +36,18 @@ def main():
         print(menu)
         choice = input("another choice: ")
 
+def add_new_project():
+    """This function will ask the user to prompt in a new project"""
+    name = input("Name: ")
+    start_date = input("Start date (dd/mm/yyyy): ")
+    priority = int(input("Priority: "))
+    cost = float(input("Cost estimate: $"))
+    percentage_of_completion = int(input("Percent complete: "))
+    return Project(name, start_date, priority, cost, percentage_of_completion)
+
 
 def save_project(projects):
+    """This function will save the project to the txt"""
     with open(FILENAME, "w") as out_file:
         for project in projects:
             out_file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t"
@@ -44,16 +55,19 @@ def save_project(projects):
 
 
 def display_porject(projects):
+    """This function will display the project"""
     incomplete = [p for p in projects if not p.is_complete()]
     complete = [p for p in projects if p.is_complete()]
-    print("Incomplete projects:")
-    for project in sorted(incomplete):
+    complete.sort()
+    incomplete.sort()
+    print("complete projects:")
+    for project in complete:
         print(f"{project}")
-    print("Completed projects:")
-    for project in sorted(complete):
-        print(f"{project}")
+    for project in incomplete:
+        print(f"{incomplete}")
 
 def load_projects(FILENAME):
+    """This function will load the txt file and save it into list"""
     projects = []
     with open(FILENAME, "r") as in_file:
         in_file.readline()
