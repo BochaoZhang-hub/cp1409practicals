@@ -20,7 +20,7 @@ class Project:
 
     def is_complete(self):
         """This function will test if its complete"""
-        return self.completion_percentage >= 100
+        return self.percentage >= 100
 
     def __lt__(self, other):
         """This function will sort"""
