@@ -1,6 +1,6 @@
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.uix.button import Button
+from kivy.uix.button import Label
 
 class DynamicLabel(App):
     def build(self):
@@ -16,7 +16,7 @@ class DynamicLabel(App):
         labels_box.clear_widgets()
 
         for name in names:
-            label = Button(text=name)  # 用 Button 显示名字，因为你没学 Label
+            label = Label(text=name)
             labels_box.add_widget(label)
 
 DynamicLabel().run()
